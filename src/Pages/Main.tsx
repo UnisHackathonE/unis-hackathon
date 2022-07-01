@@ -1,7 +1,12 @@
 import React from 'react';
+import {Wrapper} from "../Style/Main";
 
 const Main = () => {
-  return <div>메인</div>
+  return (
+      <Wrapper>
+        메인
+      </Wrapper>
+  )
 }
 
 export default Main;

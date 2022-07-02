@@ -1,9 +1,8 @@
 import React from "react";
-import { Wrapper } from "../Style/Main";
-import { YellowStarButton, RedStarButton,
+import { Wrapper, YellowStarButton, RedStarButton,
   CoralStarButton, BlueClamButton, PinkClamButton,
   OctopusButton, CoralButton, ShellButton,
-  PinkStarButton, FishButton, Title
+  PinkStarButton, FishButton, Title, BackgroundImg
 } from "../Style/style";
 
 import YStar from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-58 004.png";
@@ -16,14 +15,20 @@ import Coral from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-58 002.png";
 import Shell from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-59 010.png";
 import PStar from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-58 003.png";
 import Fish from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-59 009.png";
+import BeachImg from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-59 007.png";
 import { First, Second, Third, Fourth  } from "../Style/style";
 
 const Main = () => {
   return (
-    <>
-    <Title>
-      Recommen For ME
-    </Title>
+    <Wrapper>
+      <BackgroundImg src={BeachImg}>
+      </BackgroundImg>
+      <Title>
+        Recommend For Me
+      </Title>
+      
+
+
       <First>
         <YellowStarButton src={YStar} alt="" />
       </First>
@@ -45,7 +50,7 @@ const Main = () => {
         <PinkStarButton src={PStar} alt="" />
         <FishButton src={Fish} alt="" />
       </Fourth>
-    </>
+    </Wrapper>
   );
 };
 

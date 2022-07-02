@@ -23,6 +23,7 @@ const Main = () => {
     <Wrapper>
       <BackgroundImg src={BeachImg}>
       </BackgroundImg>
+      
       <Title>
         Recommend For Me
       </Title>

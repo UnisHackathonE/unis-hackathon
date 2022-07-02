@@ -108,5 +108,32 @@ export const FishButton = styled.img`
     border-radius: 70%;
     height: 80px;
     width: 80px;
-    margin: 
+`
+
+export const ProfileButton = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+margin: 60px 10px;
+
+`
+export const NicknameButton = styled.div`
+display: flex-col;
+
+`
+export const NameButton = styled.div`
+`
+export const Nickname = styled.div`
+`
+export const PhotoButton = styled.img`
+    border-radius: 70%;
+    height: 80px;
+    width: 80px;
+`
+export const FollowerButton = styled.div`
+`
+export const Follower = styled.div`
+`
+export const Number = styled.div`
 `

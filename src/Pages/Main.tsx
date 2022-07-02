@@ -58,6 +58,7 @@ const Main = () => {
     <Wrapper>
       <BackgroundImg src={BeachImg}>
       </BackgroundImg>
+      
       <Title>
         To. {myName}
       </Title>

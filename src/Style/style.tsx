@@ -2,16 +2,18 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: absolute;
-    `
+`
 
 export const Title = styled.div`
 font-size: 20pt;
 font-weight: bold;
 padding-top: 60px;
-margin-left: 80px;
+margin-left: auto;
+  margin-right: auto;
 position: relative;
 z-index: 2;
 color : #ffffff;
+  text-align: center;
 `
 
 export const BackgroundImg = styled.img`
@@ -21,8 +23,16 @@ position: absolute;
 background-size: cover;
 `
 
+export const RecommendBtn = styled.button`
+  float: right;
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+  margin-right: 20px;
+`
+
 export const First = styled.div`
-margin: 30px 0px 30px 160px;
+margin: 60px 0px 30px 160px;
 position: relative;
 z-index: 2;
 

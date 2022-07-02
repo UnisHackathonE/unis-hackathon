@@ -66,7 +66,6 @@ const Modal1 = ({show}: Props) => {
 
   // 추천 보내기
   const onClickSend = () => {
-    console.log("추천하기");
     const oneContent = [writer, msgs, selectId];
     const nextList: any = [...recommendedList, oneContent];
     setRecommendedList(nextList);

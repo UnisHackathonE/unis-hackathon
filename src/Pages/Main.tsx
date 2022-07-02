@@ -43,7 +43,7 @@ const Main = () => {
   // 조개 하나 클릭
   const onClickOne = (e: any) => {
     const targetId = parseInt(e.target.id);
-    const data = JsonLocalStorage.getItem("recommendedList")[targetId];
+    const data = JsonLocalStorage.getItem("recommendedList")[len-targetId-1];
     if(!data) {
       alert("추천 노래가 없습니다.");
       return;

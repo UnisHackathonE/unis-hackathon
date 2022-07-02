@@ -147,3 +147,25 @@ export const Follower = styled.div`
 `
 export const Number = styled.div`
 `
+
+/////////////////// MyList ///////////////////
+export const MyListWrapper = styled.div`
+  margin: 20px 10px 0 10px;
+  overflow-y: scroll;
+`
+
+export const OneWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+
+export const OneTitleWrapper = styled.span`
+  margin-left: 10px;
+  font-weight: bold;
+`
+
+export const Line = styled.div`
+  margin: 5px 0;
+  border: 1px solid;
+`

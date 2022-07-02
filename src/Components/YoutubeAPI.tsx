@@ -5,7 +5,6 @@ const YoutubeAPI = async (keyword: string) => {
   const search = keyword;
   const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
   let result: Array<string> = [];
-  console.log("검색어: ", search);
 
   await axios
       .get('https://www.googleapis.com/youtube/v3/search', {

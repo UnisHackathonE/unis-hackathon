@@ -7,14 +7,18 @@ export const ModalWrapper = styled.div`
   width: 300px;
   height: 400px;
   border: solid;
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  z-index: 2;
+  z-index: 5;
   background-color: white;
+`
+
+export const CloseBtn = styled.button`
+  align-self: flex-end;
 `
 
 export const InputWrapper = styled.div`
@@ -26,6 +30,7 @@ export const InputWrapper = styled.div`
 export const WriterInput = styled.input`
   width: 50%;
   padding: 5px;
+  border: 1px solid;
 `
 
 export const MsgInput = styled.textarea`
@@ -33,6 +38,7 @@ export const MsgInput = styled.textarea`
   height: 50px;
   resize: none;
   padding: 10px;
+  border: 1px solid;
 `
 
 export const YoutubeSearch = styled.input`
@@ -65,14 +71,13 @@ export const OneSelect = styled.div`
 `
 
 export const SendButton = styled.button`
-  align-self: flex-end;
-  margin: 10px;
+  margin: 30px;
 `
 
 ///////////////////////////// Modal2 //////////////////////////////
 export const From = styled.div`
   align-self: center;
-  margin: 10px 0;
+  margin: 0 0 10px 0;
 `
 
 export const NameBtn = styled.button`

@@ -1,11 +1,10 @@
 import React from "react";
 
 interface Props {
-  url: string;
+  id: string;
 }
 
-const YoutubeIframe = ({url}: Props) => {
-  const id = url.split("v=")[1];
+const YoutubeIframe = ({id}: Props) => {
   const embedUrl = `https://www.youtube.com/embed/${id}`;
 
   return (

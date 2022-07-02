@@ -23,9 +23,9 @@ const Modal1 = ({show}: Props) => {
   const [youtubeDataList, setYoutubeDataList] = useState<string[] | []>([]);
   const [showSearchResult, setShowSearchResult] = useState("none");
   const [selectId, setSelectId] = useState(""); // 선택한 video의 id
-  const [myList, setMyList] = useState(() => {
-    return JsonLocalStorage.getItem("myList") || []
-  })
+  const [recommendedList, setRecommendedList] = useState(() => {
+    return JsonLocalStorage.getItem("recommendedList") || []
+  });
 
   const handleChange1 = (event: React.ChangeEvent<HTMLInputElement>) => {
     setWriter(event.target.value);
@@ -68,8 +68,9 @@ const Modal1 = ({show}: Props) => {
   const onClickSend = () => {
     console.log("추천하기");
     const oneContent = [writer, msgs, selectId];
-    const nextList: any = [...myList, oneContent];
-    JsonLocalStorage.setItem("myList", nextList);
+    const nextList: any = [...recommendedList, oneContent];
+    setRecommendedList(nextList);
+    JsonLocalStorage.setItem("recommendedList", nextList);
     alert("노래를 추천했습니다!");
   }
 
@@ -93,7 +94,7 @@ const Modal1 = ({show}: Props) => {
   if(!show) return null;
 
   return (
-      <ModalWrapper>
+      <ModalWrapper style={{justifyContent: "center"}}>
         <InputWrapper>
           <label htmlFor="writer">작성자</label>
           <WriterInput id="writer" type="text" placeholder="이름" value={writer} onChange={handleChange1}/>

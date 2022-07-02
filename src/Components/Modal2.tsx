@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {
+  CloseBtn,
   From, IFrame,
   ModalWrapper, Msg, NameBtn, StoreBtn,
 } from "../Style/Modal";
@@ -7,10 +8,12 @@ import YoutubeIframe from "./YoutubeIframe";
 
 interface Props {
   show: boolean;
-  url: string;
+  name: string;
+  message: string;
+  id: string;
 }
 
-const Modal2 = ({show, url}: Props) => {
+const Modal2 = ({show, name, message, id}: Props) => {
 
   // 작성자 이름 클릭
   const onClickWriter = (e: any) => {
@@ -24,18 +27,25 @@ const Modal2 = ({show, url}: Props) => {
     // url 넘기기
   }
 
+  // 모달창 닫기
+  const onCloseModal = (e: any) => {
+    const displayTarget = e.target.closest('div');
+    displayTarget.style.display = "none"; // 살짝 논리에 안맞지만 일단 임시방편..
+  };
+
 
   if(!show) return null;
 
   return (
       <ModalWrapper>
+        <CloseBtn onClick={onCloseModal}>&times;</CloseBtn>
         <From>
           <span>From. </span>
-          <NameBtn onClick={onClickWriter}>{"작성자"}</NameBtn>
+          <NameBtn onClick={onClickWriter}>{name}</NameBtn>
         </From>
-        <Msg>{"작성 메시지"}</Msg>
+        <Msg>{message}</Msg>
         <IFrame>
-          <YoutubeIframe url={url}/>
+          <YoutubeIframe id={id}/>
         </IFrame>
         <StoreBtn onClick={onClickStore}>노래 저장</StoreBtn>
       </ModalWrapper>

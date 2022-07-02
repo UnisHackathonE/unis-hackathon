@@ -5,6 +5,10 @@ export const Title = styled.div`
 margin
 `
 
+export const RecommendBtn = styled.button`
+  float: right;
+`
+
 export const First = styled.div`
 margin: 150px 0px 40px 160px
 

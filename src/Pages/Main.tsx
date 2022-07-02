@@ -1,9 +1,9 @@
-import React from "react";
-import { Wrapper } from "../Style/Main";
-import { YellowStarButton, RedStarButton,
+import React, {useState} from "react";
+import {
+  YellowStarButton, RedStarButton,
   CoralStarButton, BlueClamButton, PinkClamButton,
   OctopusButton, CoralButton, ShellButton,
-  PinkStarButton, FishButton, Title
+  PinkStarButton, FishButton, Title, RecommendBtn
 } from "../Style/style";
 
 import YStar from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-58 004.png";
@@ -17,13 +17,29 @@ import Shell from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-59 010.png";
 import PStar from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-58 003.png";
 import Fish from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-59 009.png";
 import { First, Second, Third, Fourth  } from "../Style/style";
+import JsonLocalStorage from "../Localstorage/JsonLocalStorage";
+import Modal2 from "../Components/Modal2";
+import Modal1 from "../Components/Modal1";
 
 const Main = () => {
+  const myName = JsonLocalStorage.getItem("name");
+
+  const [showModal1, setShowModal1] = useState(false);
+
+
+  const onClickNewRecommend = () => {
+    setShowModal1(prev => !prev);
+  }
+
   return (
     <>
-    <Title>
-      Recommen For ME
-    </Title>
+      <Title>
+        Recommen For ME
+      </Title>
+      <RecommendBtn onClick={onClickNewRecommend}>
+        추천하기
+      </RecommendBtn>
+      <Modal1 show={showModal1} />
       <First>
         <YellowStarButton src={YStar} alt="" />
       </First>

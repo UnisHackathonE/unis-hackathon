@@ -19,7 +19,6 @@ const Modal2 = ({show, name, message, id}: Props) => {
   // 작성자 이름 클릭
   const onClickWriter = (e: any) => {
     console.log(e.target.innerHTML);
-    // 작성자 프로필?로 이동
   }
 
   // 노래 저장하기

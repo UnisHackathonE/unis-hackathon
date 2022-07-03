@@ -66,10 +66,6 @@ const Modal1 = ({show}: Props) => {
 
   // 추천 보내기
   const onClickSend = () => {
-    // if(!writer || !msgs || !selectId){
-    //   alert("내용을 입력하세요.");
-    //   return;
-    // }
     const oneContent = [writer, msgs, selectId];
     const nextList: any = [...recommendedList, oneContent];
     setRecommendedList(nextList);

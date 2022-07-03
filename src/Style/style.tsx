@@ -202,6 +202,7 @@ export const OneTitleWrapper = styled.span`
 `
 
 export const Line = styled.div`
+  background-color: #77e8ff;
   margin: 5px 0;
-  border: 1px solid;
+  border: 1px solid #77e8ff;
 `

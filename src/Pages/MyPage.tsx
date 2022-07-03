@@ -12,14 +12,25 @@ import YoutubeIframe from "../Components/YoutubeIframe";
 const MyPage = () => {
 
   const myName = JsonLocalStorage.getItem("name");
-  const MyList = JsonLocalStorage.getItem("myList");
+  const MyList = JsonLocalStorage.getItem("myList") || [];
 
-
+  let cnt = 0;
   const List = MyList.map((oneList: any[]) => {
+    let boolAD = false; // 광고
+    if(cnt !== 0 && cnt % 5 === 0) boolAD = true; // 광고 삽입
+    cnt += 1;
     const id = oneList[0];
     const title = oneList[1];
     return (
         <div>
+          {boolAD &&
+              <div>
+                <OneWrapper>
+                  <OneTitleWrapper>광고 {(cnt-1)/5}</OneTitleWrapper>
+                </OneWrapper>
+                <Line />
+              </div>
+          }
           <OneWrapper>
             <YoutubeIframe id={id} width="90px" height="60px"/>
             <OneTitleWrapper>{title}</OneTitleWrapper>
@@ -27,34 +38,37 @@ const MyPage = () => {
           <Line />
         </div>
     )
+
+
   })
 
 
-  // @ts-ignore
   return (
       <>
-       <MyPageTitle>
-          MyPage  
-        </MyPageTitle>
-        <ProfileButton>
+        <div>
+          <MyPageTitle>
+            MyPage
+          </MyPageTitle>
+          <ProfileButton>
             <NicknameButton>
-                <Nickname>
-                    @happy
-                </Nickname>
-                <NameButton>
-                  {myName}
-                </NameButton>
+              <Nickname>
+                @happy
+              </Nickname>
+              <NameButton>
+                {myName}
+              </NameButton>
             </NicknameButton>
-          <PhotoButton src="https://assetbucketdevelopment.blob.core.windows.net/testing/3823423148494587-Female_10.jpg" alt=""/>
-          <FollowerButton>
+            <PhotoButton src="https://assetbucketdevelopment.blob.core.windows.net/testing/3823423148494587-Female_10.jpg" alt=""/>
+            <FollowerButton>
               <Follower>
-                  팔로우
+                팔로우
               </Follower>
               <Number>
-                  5K
+                5K
               </Number>
-          </FollowerButton>
-      </ProfileButton>
+            </FollowerButton>
+          </ProfileButton>
+        </div>
       <MyListWrapper>
         {List}
       </MyListWrapper>

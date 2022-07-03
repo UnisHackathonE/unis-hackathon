@@ -158,6 +158,7 @@ export const OneWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 5px 0;
 `
 
 export const OneTitleWrapper = styled.span`

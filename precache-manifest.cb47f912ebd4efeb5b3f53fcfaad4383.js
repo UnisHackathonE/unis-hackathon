@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/unis-hackathon/static/media/background.93a08833.png"
   },
   {
-    "revision": "5b140c4d5ed65a4645c0389f84ef1b07",
+    "revision": "c86e3ba08a54d4969639735529cb804c",
     "url": "/unis-hackathon/index.html"
   }
 ];

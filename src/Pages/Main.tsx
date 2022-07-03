@@ -3,7 +3,8 @@ import {
   Wrapper, YellowStarButton, RedStarButton,
   CoralStarButton, BlueClamButton, PinkClamButton,
   OctopusButton, CoralButton, ShellButton,
-  PinkStarButton, FishButton, Title, BackgroundImg, RecommendBtn
+  PinkStarButton, FishButton, Title, BackgroundImg,
+  MyPageButton, RecommendBtn
 } from "../Style/style";
 
 import YStar from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-58 004.png";
@@ -21,8 +22,12 @@ import { First, Second, Third, Fourth  } from "../Style/style";
 import JsonLocalStorage from "../Localstorage/JsonLocalStorage";
 import Modal2 from "../Components/Modal2";
 import Modal1 from "../Components/Modal1";
+import toMyPage from "../Assets/homebtn-removebg-preview.png"
+import {useNavigate} from "react-router-dom";
 
 const Main = () => {
+  const navigate = useNavigate();
+
   const myName = JsonLocalStorage.getItem("name");
 
   const [showModal1, setShowModal1] = useState(false);
@@ -54,11 +59,18 @@ const Main = () => {
     setSelectedUrlId(data[2]);
   }
 
+  // 마이페이지로 이동
+  const onClickMove = () => {
+    navigate("/mypage");
+  }
+
   return (
     <Wrapper>
       <BackgroundImg src={BeachImg}>
       </BackgroundImg>
       
+      <MyPageButton src={toMyPage} alt="" onClick={onClickMove}/>
+
       <Title>
         To. {myName}
       </Title>
@@ -87,6 +99,7 @@ const Main = () => {
         <PinkStarButton src={PStar} alt="" id="8" onClick={onClickOne}/>
         <FishButton src={Fish} alt="" id="9" onClick={onClickOne}/>
       </Fourth>
+      
     </Wrapper>
   );
 };

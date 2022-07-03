@@ -4,6 +4,8 @@ export const Wrapper = styled.div`
   position: absolute;
 `
 
+
+
 export const Title = styled.div`
 font-size: 20pt;
 font-weight: bold;
@@ -120,16 +122,30 @@ export const FishButton = styled.img`
     width: 80px;
 `
 
+export const MyPageButton = styled.img`
+    height: 50px;
+    height: 50px;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 20px;\
+`
+
 export const ProfileButton = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-around;
 align-items: center;
-margin: 60px 10px;
-
+border-style: solid;
+border-color: #b9e8fd;
+height: 160px;
+background-color: #b9e8fd;
+border-radius: 10px 10px;
+margin: 0px 18px 32px 18px
 `
+
 export const NicknameButton = styled.div`
 display: flex-col;
+font-weight: bold;
 
 `
 export const NameButton = styled.div`
@@ -142,8 +158,27 @@ export const PhotoButton = styled.img`
     width: 80px;
 `
 export const FollowerButton = styled.div`
+font-weight: bold;
 `
 export const Follower = styled.div`
 `
 export const Number = styled.div`
+`
+export const StorageListBtn = styled.div`
+border-style: solid;
+border-color: #b9e8fd;
+height: 800px;
+background-color: #b9e8fd;
+border-radius: 10px 10px;
+margin: 32px 18px 0px 18px;
+`
+export const hr = styled.div`
+width: 100%;
+height:1px
+`
+export const MyPageTitle = styled.div`
+font-weight: bold;
+margin: 0px 150px 32px 150px;
+padding-top: 30px;
+font-size: 26px;
 `

@@ -1,13 +1,16 @@
 import React from "react";
 import { FollowerButton, NicknameButton, 
          NameButton, PhotoButton, Nickname,
-         ProfileButton, Follower, Number
-         } from "../Style/style";
+         ProfileButton, Follower, Number, StorageListBtn, MyPageTitle     
+            } from "../Style/style";
 
 
 const MyPage = () => {
     return (
         <>
+        <MyPageTitle>
+          MyPage  
+        </MyPageTitle>
         <ProfileButton>
             <NicknameButton>
                 <Nickname>
@@ -28,9 +31,10 @@ const MyPage = () => {
                 </Number>
             </FollowerButton>
         </ProfileButton>
-        <div>
+        <hr></hr>
+        <StorageListBtn>
         {/* mapping 함수 */}
-        </div>
+        </StorageListBtn>
         </>
 
     );

@@ -3,7 +3,8 @@ import {
   Wrapper, YellowStarButton, RedStarButton,
   CoralStarButton, BlueClamButton, PinkClamButton,
   OctopusButton, CoralButton, ShellButton,
-  PinkStarButton, FishButton, Title, BackgroundImg, RecommendBtn
+  PinkStarButton, FishButton, Title, BackgroundImg,
+  MyPageButton, RecommendBtn
 } from "../Style/style";
 
 import YStar from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-58 004.png";
@@ -21,6 +22,7 @@ import { First, Second, Third, Fourth  } from "../Style/style";
 import JsonLocalStorage from "../Localstorage/JsonLocalStorage";
 import Modal2 from "../Components/Modal2";
 import Modal1 from "../Components/Modal1";
+import toMyPage from "../Assets/홈버튼-removebg-preview.png"
 
 const Main = () => {
   const myName = JsonLocalStorage.getItem("name");
@@ -59,6 +61,8 @@ const Main = () => {
       <BackgroundImg src={BeachImg}>
       </BackgroundImg>
       
+      <MyPageButton src={toMyPage} alt=""></MyPageButton>
+
       <Title>
         To. {myName}
       </Title>
@@ -87,6 +91,7 @@ const Main = () => {
         <PinkStarButton src={PStar} alt="" id="8" onClick={onClickOne}/>
         <FishButton src={Fish} alt="" id="9" onClick={onClickOne}/>
       </Fourth>
+      
     </Wrapper>
   );
 };

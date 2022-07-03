@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "48e880029f2bedad50bd",
+    "revision": "b37a07f8cd09366ef682",
     "url": "/unis-hackathon/static/css/main.170be054.chunk.css"
   },
   {
-    "revision": "48e880029f2bedad50bd",
-    "url": "/unis-hackathon/static/js/main.48e88002.chunk.js"
+    "revision": "b37a07f8cd09366ef682",
+    "url": "/unis-hackathon/static/js/main.b37a07f8.chunk.js"
   },
   {
-    "revision": "1ef82517f0288dd98c89",
-    "url": "/unis-hackathon/static/js/1.1ef82517.chunk.js"
+    "revision": "d772d1d948b76cf26414",
+    "url": "/unis-hackathon/static/js/1.d772d1d9.chunk.js"
   },
   {
     "revision": "c058a652be883d13cc40",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/unis-hackathon/static/media/background.93a08833.png"
   },
   {
-    "revision": "7238a8e8ee72d7dcd1f8108c9b66f33b",
+    "revision": "5b140c4d5ed65a4645c0389f84ef1b07",
     "url": "/unis-hackathon/index.html"
   }
 ];

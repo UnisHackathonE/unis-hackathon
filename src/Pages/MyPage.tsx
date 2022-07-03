@@ -1,14 +1,70 @@
-import React from "react";
-import { FollowerButton, NicknameButton, 
-         NameButton, PhotoButton, Nickname,
-         ProfileButton, Follower, Number, StorageListBtn, MyPageTitle     
-            } from "../Style/style";
+import React, {useEffect, useState} from "react";
+import {
+  FollowerButton, NicknameButton,
+  NameButton, PhotoButton, Nickname,
+  ProfileButton, Follower, Number, MyListWrapper, OneWrapper, Line, MyPageTitle
+} from "../Style/style";
+import JsonLocalStorage from "../Localstorage/JsonLocalStorage";
+import YoutubeAPI from "../Components/YoutubeAPI";
+import YoutubeIframe from "../Components/YoutubeIframe";
+import OneTitle from "../Components/OneTitle";
+
 
 
 const MyPage = () => {
-    return (
-        <>
-        <MyPageTitle>
+
+  const MyList = JsonLocalStorage.getItem("myList");
+
+  const [videoTitle, setVideoTitle] = useState("");
+  const [list, setList] = useState([]);
+
+
+//   useEffect(() => {
+//     let idx=1;
+//     const List = MyList.map((videoId: string) => {
+//       setVideoTitle("");
+//       if(idx % 5 === 0){  // 광고
+//         return (
+//             <OneWrapper>
+//               <div>{videoId}</div>
+//             </OneWrapper>
+//         )
+//       }
+//       callYoutube(videoId)
+//           .then((res) => {
+//             const data = res[0];    // 리스트 첫번째 요소
+//             const snippetIdx = "snippet";
+//             const titleIdx = "title";
+//             // @ts-ignore
+//             setVideoTitle(data[snippetIdx][titleIdx]);
+//             // videoTitle = data[snippetIdx][titleIdx];
+//             idx += 1;
+//           })
+//           .catch((err) => {
+//             return null;
+//           })
+
+//       return (
+//           <div>
+//             <OneWrapper>
+//               <YoutubeIframe id={videoId} width="90px" height="60px"/>
+//               <OneTitle id={videoTitle} />
+//             </OneWrapper>
+//             <Line />
+//           </div>
+//       )
+//     });
+//     setList(List);
+//   },[]);
+
+  async function callYoutube(videoId: string) {
+      return await YoutubeAPI(videoId);
+  }
+
+
+  return (
+      <>
+       <MyPageTitle>
           MyPage  
         </MyPageTitle>
         <ProfileButton>
@@ -32,12 +88,12 @@ const MyPage = () => {
             </FollowerButton>
         </ProfileButton>
         <hr></hr>
-        <StorageListBtn>
-        {/* mapping 함수 */}
-        </StorageListBtn>
-        </>
+        <MyListWrapper>
+          {list}
+        </MyListWrapper>
+      </>
 
-    );
+  );
 };
 
 export default MyPage;

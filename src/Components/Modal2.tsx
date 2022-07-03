@@ -1,10 +1,7 @@
-import React, {useCallback, useEffect, useState} from 'react';
-import {
-  CloseBtn,
-  From, IFrame,
-  ModalWrapper, Msg, NameBtn, StoreBtn,
-} from "../Style/Modal";
+import React, {useState} from 'react';
+import {CloseBtn, From, IFrame, ModalWrapper, Msg, NameBtn, StoreBtn,} from "../Style/Modal";
 import YoutubeIframe from "./YoutubeIframe";
+import JsonLocalStorage from "../Localstorage/JsonLocalStorage";
 
 interface Props {
   show: boolean;
@@ -15,6 +12,10 @@ interface Props {
 
 const Modal2 = ({show, name, message, id}: Props) => {
 
+  const [myList, setMyList] = useState(() => {
+    return JsonLocalStorage.getItem("myList") || []
+  });
+
   // 작성자 이름 클릭
   const onClickWriter = (e: any) => {
     console.log(e.target.innerHTML);
@@ -23,8 +24,18 @@ const Modal2 = ({show, name, message, id}: Props) => {
 
   // 노래 저장하기
   const onClickStore = () => {
+    let nextList: any = [...myList, id];
+    setMyList(nextList);
+    JsonLocalStorage.setItem("myList", nextList);
     alert("노래를 저장했습니다.");
-    // url 넘기기
+    // 광고 삽입
+    if(myList.length % 5 === 0){
+      const adIdx = myList.length / 5;
+      const newAD: string = "광고" + adIdx.toLocaleString;
+      nextList = [...myList, newAD];
+      setMyList(nextList);
+      JsonLocalStorage.setItem("myList", nextList);
+    }
   }
 
   // 모달창 닫기
@@ -45,7 +56,7 @@ const Modal2 = ({show, name, message, id}: Props) => {
         </From>
         <Msg>{message}</Msg>
         <IFrame>
-          <YoutubeIframe id={id}/>
+          <YoutubeIframe id={id} width="90%" height="150px"/>
         </IFrame>
         <StoreBtn onClick={onClickStore}>노래 저장</StoreBtn>
       </ModalWrapper>

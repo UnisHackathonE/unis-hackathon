@@ -58,7 +58,7 @@ export const ListWrapper = styled.div`
   flex-direction: column;
   background-color: white;
   width: 200px;
-  height: 150px;
+  height: 300px;
   border: 1px solid;
   overflow-y: scroll;
   position: absolute;

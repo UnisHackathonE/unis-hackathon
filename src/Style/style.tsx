@@ -182,3 +182,25 @@ margin: 0px 150px 32px 150px;
 padding-top: 30px;
 font-size: 26px;
 `
+
+/////////////////// MyList ///////////////////
+export const MyListWrapper = styled.div`
+  margin: 20px 10px 0 10px;
+  overflow-y: scroll;
+`
+
+export const OneWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+
+export const OneTitleWrapper = styled.span`
+  margin-left: 10px;
+  font-weight: bold;
+`
+
+export const Line = styled.div`
+  margin: 5px 0;
+  border: 1px solid;
+`

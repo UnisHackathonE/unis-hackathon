@@ -66,12 +66,18 @@ const Modal1 = ({show}: Props) => {
 
   // 추천 보내기
   const onClickSend = () => {
-    console.log("추천하기");
+    if(!writer || !msgs || !selectId){
+      alert("내용을 입력하세요.");
+      return;
+    }
     const oneContent = [writer, msgs, selectId];
     const nextList: any = [...recommendedList, oneContent];
     setRecommendedList(nextList);
     JsonLocalStorage.setItem("recommendedList", nextList);
     alert("노래를 추천했습니다!");
+    setWriter("");
+    setMsgs("");
+    setSearchKeyword("");
   }
 
   // 유튜브 검색 결과 리스트
@@ -80,13 +86,17 @@ const Modal1 = ({show}: Props) => {
     const videoId = "videoId";
     const snippetIdx = "snippet";
     const titleIdx = "title";
+    const thumbnails = "thumbnails";
     // @ts-ignore
     const urlId = data[id][videoId];
     // @ts-ignore
     const title = data[snippetIdx][titleIdx];
+    // @ts-ignore
+    const thumbnail = data[snippetIdx][thumbnails].default.url;
     return(
         <OneSelect id={urlId} onClick={onClickSelect}>
-          {title}
+          <img src={thumbnail} alt=""/>
+          <p style={{marginTop: 0, fontSize: "small", fontWeight: "bold"}}>{title}</p>
         </OneSelect>
     )
   })

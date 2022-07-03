@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "ce731f515087e8d96bfd",
+    "revision": "d637502d1ee0e6ac8614",
     "url": "/unis-hackathon/static/css/main.170be054.chunk.css"
   },
   {
-    "revision": "ce731f515087e8d96bfd",
-    "url": "/unis-hackathon/static/js/main.ce731f51.chunk.js"
+    "revision": "d637502d1ee0e6ac8614",
+    "url": "/unis-hackathon/static/js/main.d637502d.chunk.js"
   },
   {
-    "revision": "01df1cd4378fed09f981",
-    "url": "/unis-hackathon/static/js/1.01df1cd4.chunk.js"
+    "revision": "1ef82517f0288dd98c89",
+    "url": "/unis-hackathon/static/js/1.1ef82517.chunk.js"
   },
   {
     "revision": "c058a652be883d13cc40",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/unis-hackathon/static/media/KakaoTalk_Photo_2022-07-02-15-00-59 007.48473609.png"
   },
   {
-    "revision": "b688a943d7f394917f92d342a7396412",
+    "revision": "6db0ce69128c1686289697f2a7c94a84",
     "url": "/unis-hackathon/index.html"
   }
 ];

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {CloseBtn, From, IFrame, ModalWrapper, Msg, NameBtn, StoreBtn,} from "../Style/Modal";
 import YoutubeIframe from "./YoutubeIframe";
 import JsonLocalStorage from "../Localstorage/JsonLocalStorage";
+import YoutubeAPI2 from "./YoutubeAPI2";
 
 interface Props {
   show: boolean;
@@ -21,20 +22,38 @@ const Modal2 = ({show, name, message, id}: Props) => {
     console.log(e.target.innerHTML);
   }
 
+  // 영상 제목 불러오기
+  async function callYoutube(videoId: string) {
+    return await YoutubeAPI2(videoId);
+  }
+
   // 노래 저장하기
   const onClickStore = () => {
-    let nextList: any = [...myList, id];
-    setMyList(nextList);
-    JsonLocalStorage.setItem("myList", nextList);
-    alert("노래를 저장했습니다.");
+    let title;
+    let nextList;
+    callYoutube(id)
+        .then((res) => {
+          console.log(res);
+          // res: title
+          title = res;
+          const addElement = [id, title];
+          nextList = [...myList, addElement];
+          setMyList(nextList);
+          // @ts-ignore
+          JsonLocalStorage.setItem("myList", nextList);
+          alert("노래를 저장했습니다.");
+        })
+        .catch((err) => {
+          console.log(err);
+        })
     // 광고 삽입
-    if(myList.length % 5 === 0){
-      const adIdx = myList.length / 5;
-      const newAD: string = "광고" + adIdx.toLocaleString;
-      nextList = [...myList, newAD];
-      setMyList(nextList);
-      JsonLocalStorage.setItem("myList", nextList);
-    }
+    // if(myList.length % 5 === 0){
+    //   const adIdx = myList.length / 5;
+    //   const newAD: string = "광고" + adIdx.toLocaleString;
+    //   nextList = [...myList, newAD];
+    //   setMyList(nextList);
+    //   JsonLocalStorage.setItem("myList", nextList);
+    // }
   }
 
   // 모달창 닫기

@@ -17,7 +17,7 @@ import Coral from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-58 002.png";
 import Shell from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-59 010.png";
 import PStar from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-58 003.png";
 import Fish from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-59 009.png";
-import BeachImg from "../Assets/KakaoTalk_Photo_2022-07-02-15-00-59 007.png";
+import BeachImg from "../Assets/background.png";
 import { First, Second, Third, Fourth  } from "../Style/style";
 import JsonLocalStorage from "../Localstorage/JsonLocalStorage";
 import Modal2 from "../Components/Modal2";

@@ -1,7 +1,7 @@
 {
   "main.css": "/unis-hackathon/static/css/main.170be054.chunk.css",
-  "main.js": "/unis-hackathon/static/js/main.d637502d.chunk.js",
-  "main.js.map": "/unis-hackathon/static/js/main.d637502d.chunk.js.map",
+  "main.js": "/unis-hackathon/static/js/main.48e88002.chunk.js",
+  "main.js.map": "/unis-hackathon/static/js/main.48e88002.chunk.js.map",
   "static/js/1.1ef82517.chunk.js": "/unis-hackathon/static/js/1.1ef82517.chunk.js",
   "static/js/1.1ef82517.chunk.js.map": "/unis-hackathon/static/js/1.1ef82517.chunk.js.map",
   "runtime~main.js": "/unis-hackathon/static/js/runtime~main.c058a652.js",
@@ -15,9 +15,9 @@
   "static/media/KakaoTalk_Photo_2022-07-02-15-00-59 010.png": "/unis-hackathon/static/media/KakaoTalk_Photo_2022-07-02-15-00-59 010.5269b8bf.png",
   "static/media/KakaoTalk_Photo_2022-07-02-15-00-58 003.png": "/unis-hackathon/static/media/KakaoTalk_Photo_2022-07-02-15-00-58 003.080eabf4.png",
   "static/media/KakaoTalk_Photo_2022-07-02-15-00-59 009.png": "/unis-hackathon/static/media/KakaoTalk_Photo_2022-07-02-15-00-59 009.aa3eb9e1.png",
-  "static/media/KakaoTalk_Photo_2022-07-02-15-00-59 007.png": "/unis-hackathon/static/media/KakaoTalk_Photo_2022-07-02-15-00-59 007.48473609.png",
+  "static/media/background.png": "/unis-hackathon/static/media/background.93a08833.png",
   "static/css/main.170be054.chunk.css.map": "/unis-hackathon/static/css/main.170be054.chunk.css.map",
   "index.html": "/unis-hackathon/index.html",
-  "precache-manifest.394326f0e580ef7ef0604bdc924521d6.js": "/unis-hackathon/precache-manifest.394326f0e580ef7ef0604bdc924521d6.js",
+  "precache-manifest.4033faf45ef4d8c4454cc9f4aa5e9255.js": "/unis-hackathon/precache-manifest.4033faf45ef4d8c4454cc9f4aa5e9255.js",
   "service-worker.js": "/unis-hackathon/service-worker.js"
 }
